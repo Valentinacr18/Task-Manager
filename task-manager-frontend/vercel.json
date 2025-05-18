@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "dist/task-manager-frontend",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
