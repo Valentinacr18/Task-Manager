@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboardComponent implements OnInit {
   tasks: any[] = [];
+  users: any[] = [];
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -19,10 +20,24 @@ export class DashboardComponent implements OnInit {
     this.http.get<any[]>('http://localhost:4000/api/tasks').subscribe((data) => {
       this.tasks = data;
     });
+
+    this.http.get<any[]>('http://localhost:4000/api/users').subscribe((data) => {
+      this.users = data;
+    });
   }
 
   filterByStatus(status: string) {
     return this.tasks.filter(task => task.status === status);
+  }
+
+  getUserNameById(userId: number): string {
+    const user = this.users.find(u => u.id === userId);
+    return user ? user.name : 'Unknown';
+  }
+
+  getUserEmailById(userId: number): string {
+    const user = this.users.find(u => u.id === userId);
+    return user ? user.email : 'No email';
   }
 
   goToCreateTask() {

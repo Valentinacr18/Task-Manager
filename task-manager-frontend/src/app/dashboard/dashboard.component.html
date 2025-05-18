@@ -1,37 +1,47 @@
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-  <h2 style="margin: 0; font-size: 1.8rem;">Task Board</h2>
-  <button 
-    (click)="goToCreateTask()" 
-    style="padding: 8px 16px; border: none; background-color: #3f51b5; color: white; border-radius: 6px; cursor: pointer; font-weight: 500;">
-    + Create Task
-  </button>
-</div>
-
-<div style="display: flex; gap: 2rem; flex-wrap: wrap;">
-  <!-- Pending Column -->
-  <div style="flex: 1; min-width: 250px; background-color: #f5f5f5; border-radius: 8px; padding: 1rem;">
-    <h3 style="margin-top: 0; color: #333;">🟠 Pending</h3>
-    <div *ngFor="let task of filterByStatus('pending')" style="background: white; padding: 1rem; margin-bottom: 0.75rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-      <strong>{{ task.title }}</strong><br>
-      <small>{{ task.description }}</small>
-    </div>
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h2>Task Board</h2>
+    <button (click)="goToCreateTask()">+ Create Task</button>
   </div>
 
-  <!-- In Progress Column -->
-  <div style="flex: 1; min-width: 250px; background-color: #e3f2fd; border-radius: 8px; padding: 1rem;">
-    <h3 style="margin-top: 0; color: #1565c0;">🔵 In Progress</h3>
-    <div *ngFor="let task of filterByStatus('in-progress')" style="background: white; padding: 1rem; margin-bottom: 0.75rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-      <strong>{{ task.title }}</strong><br>
-      <small>{{ task.description }}</small>
+  <div class="dashboard-columns">
+    <!-- Pending Column -->
+    <div class="dashboard-column pending">
+      <h3>🟠 Pending</h3>
+      <div class="task-card" *ngFor="let task of filterByStatus('pending')">
+        <strong>{{ task.title }}</strong><br />
+        <small>{{ task.description }}</small><br />
+        <small class="assigned-to">
+          👤 {{ getUserNameById(task.userId) }}<br />
+          📧 {{ getUserEmailById(task.userId) }}
+        </small>
+      </div>
     </div>
-  </div>
 
-  <!-- Completed Column -->
-  <div style="flex: 1; min-width: 250px; background-color: #e8f5e9; border-radius: 8px; padding: 1rem;">
-    <h3 style="margin-top: 0; color: #2e7d32;">✅ Completed</h3>
-    <div *ngFor="let task of filterByStatus('completed')" style="background: white; padding: 1rem; margin-bottom: 0.75rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-      <strong>{{ task.title }}</strong><br>
-      <small>{{ task.description }}</small>
+    <!-- In Progress Column -->
+    <div class="dashboard-column in-progress">
+      <h3>🔵 In Progress</h3>
+      <div class="task-card" *ngFor="let task of filterByStatus('in-progress')">
+        <strong>{{ task.title }}</strong><br />
+        <small>{{ task.description }}</small><br />
+        <small class="assigned-to">
+          👤 {{ getUserNameById(task.userId) }}<br />
+          📧 {{ getUserEmailById(task.userId) }}
+        </small>
+      </div>
+    </div>
+
+    <!-- Completed Column -->
+    <div class="dashboard-column completed">
+      <h3>✅ Completed</h3>
+      <div class="task-card" *ngFor="let task of filterByStatus('completed')">
+        <strong>{{ task.title }}</strong><br />
+        <small>{{ task.description }}</small><br />
+        <small class="assigned-to">
+          👤 {{ getUserNameById(task.userId) }}<br />
+          📧 {{ getUserEmailById(task.userId) }}
+        </small>
+      </div>
     </div>
   </div>
 </div>
