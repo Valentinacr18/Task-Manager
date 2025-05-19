@@ -27,7 +27,6 @@ Full Stack Task Management Application developed using **Angular** on the fronte
 - [Architecture Diagram](#-architecture-diagram)
 - [Resources Used](#-resources-used)
 - [Postman/Swagger Collection](#-postmanswagger-collection)
-- [Screenshots](#-screenshots)
 
 ---
 
@@ -103,7 +102,6 @@ cd task-manager-frontend
 npm install
 ng serve --open
 ```
-
 ---
 
 ## 🔗 REST API
