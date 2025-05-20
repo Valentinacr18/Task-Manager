@@ -154,7 +154,6 @@ ng serve --open
 TaskFormComponent       userRoutes/taskRoutes         Sequelize Models
 DashboardComponent   userController/taskController     User / Task
 ```
-
 ---
 
 ## 📚 Resources Used
