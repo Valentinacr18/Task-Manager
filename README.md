@@ -78,7 +78,6 @@ task-manager/
 │   └── main.ts                    # Angular bootstrap file
 └── README.md                      # Project documentation
 ```
-
 ---
 
 ## 🛠️ Local Setup Instructions
