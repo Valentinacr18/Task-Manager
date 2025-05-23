@@ -3,7 +3,6 @@
 Full Stack Task Management Application developed using **Angular** on the frontend and **Node.js + Express + MySQL** on the backend. It allows users to create, list and update, as well as manage the assigned users.
 
 ---
-
 ### 🖼️ Preview
 
 ![demo1](./assets/demo1.JPG)
@@ -15,7 +14,6 @@ Full Stack Task Management Application developed using **Angular** on the fronte
 ![Demo](./assets/demo.gif)
 
 ---
-
 ## 📌 Table of Contents
 
 - [Technologies](#-technologies)
@@ -29,7 +27,6 @@ Full Stack Task Management Application developed using **Angular** on the fronte
 - [Postman/Swagger Collection](#-postmanswagger-collection)
 
 ---
-
 ## 🚀 Technologies
 
 ### Frontend
@@ -45,7 +42,6 @@ Full Stack Task Management Application developed using **Angular** on the fronte
 - Dotenv
 
 ---
-
 ## 🧱 Project Structure
 
 ```
@@ -79,7 +75,6 @@ task-manager/
 └── README.md                      # Project documentation
 ```
 ---
-
 ## 🛠️ Local Setup Instructions
 
 ### 🔧 Prerequisites
@@ -121,7 +116,6 @@ ng serve --open
 | DELETE | `/:id`           | Delete a task                      |
 
 ---
-
 ## ⚠️ Error Handling
 
 - `400 Bad Request` if `title`, `dueDate`, or `userId` is missing when creating a task.
@@ -130,7 +124,6 @@ ng serve --open
 - `500 Internal Server Error` for general failures.
 
 ---
-
 ## 🧩 App Features
 
 ### 🖥️ Frontend (Angular standalone)
@@ -144,7 +137,6 @@ ng serve --open
 - **🔁 Navigation** between dashboard and form
 
 ---
-
 ## 📊 Architecture Diagram
 
 ```
@@ -154,7 +146,6 @@ TaskFormComponent       userRoutes/taskRoutes         Sequelize Models
 DashboardComponent   userController/taskController     User / Task
 ```
 ---
-
 ## 📚 Resources Used
 
 - [Angular Standalone Components](https://angular.io/guide/standalone-components)
@@ -165,7 +156,6 @@ DashboardComponent   userController/taskController     User / Task
 - [Postman - Create Collections](https://learning.postman.com/docs/getting-started/creating-the-first-collection/)
 
 ---
-
 ## 📬 Postman/Swagger Collection
 
 A Postman collection is provided (see `/postman` folder or request export) with both success and error test cases, including:
