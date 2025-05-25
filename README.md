@@ -1,5 +1,4 @@
 # 🗂️ Task Manager 
-
 Full Stack Task Management Application developed using **Angular** on the frontend and **Node.js + Express + MySQL** on the backend. It allows users to create, list and update, as well as manage the assigned users.
 
 ---
