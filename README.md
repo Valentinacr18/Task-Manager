@@ -96,7 +96,6 @@ npm install
 ng serve --open
 ```
 ---
-
 ## 🔗 REST API
 
 ### Users (`/api/users`)
