@@ -88,7 +88,6 @@ cp .env.example .env
 npm install
 npm run dev
 ```
-
 ### 💻 Frontend
 ```bash
 cd task-manager-frontend
