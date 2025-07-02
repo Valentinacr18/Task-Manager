@@ -44,6 +44,7 @@ Full Stack Task Management Application developed using **Angular** on the fronte
 ## 🧱 Project Structure
 
 ```
+
 task-manager/
 ├── task-manager-backend/
 │   ├── src/
@@ -72,6 +73,7 @@ task-manager/
 │   ├── index.html                 # Main HTML file
 │   └── main.ts                    # Angular bootstrap file
 └── README.md                      # Project documentation
+
 ```
 ---
 ## 🛠️ Local Setup Instructions
